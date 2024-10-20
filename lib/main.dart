@@ -6,6 +6,7 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:acadarena_semcomp_app/pages/home_page.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:acadarena_semcomp_app/pages/dashboard_page.dart';
 
 final navigatorKey = GlobalKey<NavigatorState>();
 FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
@@ -88,6 +89,7 @@ class MyApp extends StatelessWidget {
         navigatorKey: navigatorKey,
         routes: {
           '/notification_screen': (context) => const NotificationPage(),
+          '/dashboard_screen': (context) => DashboardPage(),
         });
   }
 }

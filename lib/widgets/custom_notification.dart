@@ -15,24 +15,13 @@ Future<void> showCustomNotification(title, body, confirmation) async {
     styleInformation: BigTextStyleInformation(
       body,
       contentTitle: "<b>$title</b>",
-      summaryText: 'AcadArena',
+      summaryText: " • Discord",
       htmlFormatBigText: true, // Enable HTML formatting for big text
       htmlFormatContentTitle: true,
       htmlFormatSummaryText: true,
     ),
-    actions: [
-      const AndroidNotificationAction(
-        'true',
-        'Confirmar',
-        showsUserInterface: false,
-      ),
-      const AndroidNotificationAction(
-        'false',
-        'Cancelar',
-        showsUserInterface: false,
-      ),
-    ],
   );
+
   var platformChannelSpecifics = NotificationDetails(
     android: androidPlatformChannelSpecifics,
   );
